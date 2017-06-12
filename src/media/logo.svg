@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="145px" height="39px" viewBox="0 0 145 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-5.1%" y="-16.1%" width="110.2%" height="145.2%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.15 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <rect id="path-2" x="0" y="0" width="137" height="31" rx="2"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="challenge-page" transform="translate(-76.000000, -28.000000)">
+            <g id="nav-green-big">
+                <g id="logo" filter="url(#filter-1)" transform="translate(80.000000, 30.000000)">
+                    <g id="Rectangle-2">
+                        <use fill="#2ECC71" fill-rule="evenodd" xlink:href="#path-2"></use>
+                        <rect stroke="#FFFFFF" stroke-width="1" x="0.5" y="0.5" width="136" height="30" rx="2"></rect>
+                    </g>
+                    <g id="Group-3" transform="translate(9.000000, 3.000000)">
+                        <text id="Fo-kHacker" font-family="Raleway" font-size="21.6666667" font-weight="normal" fill="#FEFEFE">
+                            <tspan x="0" y="20">Fo  kHacker</tspan>
+                        </text>
+                        <g id="r" transform="translate(25.500000, 9.230769)" stroke="#FEFEFE" stroke-width="0.605">
+                            <ellipse id="Oval-4" cx="1.11888112" cy="1.14832536" rx="1.11888112" ry="1.14832536"></ellipse>
+                            <ellipse id="Oval-4" cx="5.03496503" cy="9.76076555" rx="1.11888112" ry="1.14832536"></ellipse>
+                            <ellipse id="Oval-4" cx="8.95104895" cy="1.14832536" rx="1.11888112" ry="1.14832536"></ellipse>
+                            <polyline id="Path-2" points="5.03496503 8.46889952 5.03496503 5.21495921 8.17535687 1.99192548"></polyline>
+                            <path d="M5.03496503,5.215311 L1.93517012,2.03394254" id="Path-3"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

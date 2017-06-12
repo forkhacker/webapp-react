@@ -1,0 +1,91 @@
+.filterbar{
+    display: inline-block;
+    margin-top: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    height: 60px !important;
+/*    background-color: white;*/
+}
+
+.filterbar .input-group{
+    max-width: 310px;
+/*    display: inline-block;*/
+}
+
+.filterbar .input-group-label{
+    background-color: white;
+    border: none;
+    color: #8B8B8B;
+/*    display: block !important;*/
+}
+
+.filterbar .input-group-field{
+    height: 60px;
+    border: none ;
+    box-shadow: none;
+/*    display: block !important;*/
+    padding-top: 10px;
+}
+
+.filterbar .input-group-field::-webkit-input-placeholder {
+    font: normal 18px 'Roboto';
+    color: #8B8B8B;
+}
+
+.filterbar .input-group-field:-ms-input-placeholder {
+    font: normal 18px 'Roboto';
+    color: #8B8B8B;
+}
+
+.filterbar .input-group-field:-moz-placeholder {
+    font: normal 18px 'Roboto';
+    color: #8B8B8B;
+}
+
+.filterbar .input-group-field::-moz-placeholder {
+    font: normal 18px 'Roboto';
+    color: #8B8B8B;
+}
+
+.filter-select{
+/*    display: inline-block;*/
+    margin-top: -76px;
+    margin-left: 304px;
+    
+}
+
+
+.filter-select select{
+    height: 60px;
+    font-family: 'Roboto' !important;
+    font-size: 18px !important;
+    color: black !important;
+    border: none !important;
+    box-shadow:none !important; 
+    -webkit-transition: none !important;
+    transition: none !important;
+    outline: none !important;
+/*    width: 149px;*/
+    width: 141px;
+    border-left: 1px solid rgba(0,0,0,0.1) !important;
+    background-image: url(../media/chevron-down.svg) !important;
+    background-size: 30px !important;
+    padding-top: 0px;
+}
+
+.filter-select-labels{
+/*    border: 1px solid black;*/
+/*    display: inline-block;*/
+    margin-left: 304px;
+    margin-top: -47px;
+}
+
+.filter-select-labels div{
+/*    border: 1px solid black;*/
+    display: inline-block;
+    width: 141px;
+    font: normal 15px 'Roboto';
+    color: #8B8B8B;
+    padding-left: 9px;
+}

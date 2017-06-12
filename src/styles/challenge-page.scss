@@ -1,0 +1,164 @@
+.challenge-main{
+/*    position: relative;*/
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+    margin-top: 50px;
+    padding: 30px 30px;
+    margin-bottom: 15px;
+    
+}
+
+.challenge-line{
+    font: bold 25px 'Roboto';
+    max-width: 500px;
+}
+
+.tags-list{
+    padding-top: 20px;
+/*    padding-bottom: 20px;*/
+    max-width: 500px;
+}
+
+.tag{
+    display: inline-block;
+    font: normal 13px 'Roboto';
+    color: #28A15F;
+    border: 1px solid #28A15F;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 5px;
+}
+
+.start-btn span{
+    font: normal 15px 'Roboto';
+}
+
+.start-btn{
+    padding: 5px 17px;
+    border-radius: 5px;
+    background-color: #2DCC70;
+    float: right;
+    margin-top: -30px;
+    margin-right: 40px;
+}
+
+.start-btn:hover{
+    background-color: #2DCC70;
+}
+
+.ending-in{
+/*    display: inline-block;*/
+    float: right;
+    color: #4A4A4A;
+    font: bold 17px 'Roboto';
+    margin-top: 10px;
+    margin-right: -110px;
+/*    padding-right: 20px;*/
+/*    padding-bottom: 10px;*/
+/*    margin-right: -50px;*/
+}
+
+.time-left{
+    font: normal 17px 'Roboto';
+    color: #29A060;
+}
+
+.about-challenge-card{
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+    padding: 30px 30px;
+}
+
+.about-challenge-card-head{
+    font: bold 20px 'Roboto';
+    border-bottom: 2px solid #C9C9C9;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.about-challenge-card-desc{
+    font: normal 15px 'Roboto';
+}
+
+.about-repo-card{
+    padding: 30px 30px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+    width: 385px;
+/*    position: fixed;*/
+}
+
+.repo-card-fix{
+    position: fixed;
+    right: 75px;
+    top: 0px;
+}
+
+.repo-image{
+    display: inline-block;
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+.repo-name{
+    margin-left: 15px;
+    display: inline-block;
+    font: normal 30px 'Raleway';
+    color: #4A4A4A;
+    vertical-align: top;
+}
+
+.repo-sub-name{
+    display: inline-block;
+    font: normal 17px 'Raleway';
+    color: #4A4A4A;
+    margin-left: 72px;
+    position: relative;
+    top: -25px;
+}
+
+.repo-star-watch button, .repo-actions button{
+    border: 1px solid black;
+    background-color: white;
+    font: bold 15px 'Roboto';
+    color: black;
+    padding: 5px;
+}
+
+.repo-star-watch span{
+    font: bold 15px 'Roboto';
+    border: 1px solid black;
+    padding: 5px;
+    position: relative;
+    top: -7px;
+    margin-right: 10px;
+}
+
+.repo-star-watch button:hover, .repo-actions button:hover{
+    background-color: white;
+    color: black;
+}
+
+.repo-actions button{
+    padding: 5px 15px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.repo-actions{
+    margin-bottom: 10px;
+}
+
+.mentor-name{
+    font: normal 23px 'Roboto';
+    color: black;
+    margin-top: 5px;
+}
+
+.mentor-id{
+    color: #A4A4A4;
+    font: normal 15px 'Roboto';
+    top: -30px;
+}

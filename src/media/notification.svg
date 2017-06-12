@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="33px" viewBox="0 0 25 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>notification</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-40.6%" y="-20.0%" width="185.4%" height="156.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.15 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="challenge-page" transform="translate(-1114.000000, -31.000000)" fill-rule="nonzero" fill="#FFFFFF">
+            <g id="nav-green-big">
+                <g id="notification" filter="url(#filter-1)" transform="translate(1118.000000, 33.000000)">
+                    <path d="M17.0725664,17.7438965 L14.8577696,14.6049316 L14.8577696,8.47246094 C14.8577696,5.34248047 12.5449903,2.74370117 9.54136043,2.29985352 L9.54136043,0.914648437 C9.54136043,0.409521484 9.13251462,0 8.62826984,0 C8.1239763,0 7.71513049,0.409521484 7.71513049,0.914648437 L7.71513049,2.29980469 C4.71150067,2.74365234 2.39867257,5.34243164 2.39867257,8.47241211 L2.39867257,14.6049316 L0.183924554,17.7438965 C-0.242421629,18.3480469 0.189335533,19.186377 0.929567272,19.186377 L16.3269724,19.186377 C17.0655955,19.1864258 17.4998875,18.3493164 17.0725664,17.7438965 Z" id="Shape"></path>
+                    <path d="M8.62826984,19.839502 C7.20786336,19.839502 6.05230238,20.9969238 6.05230238,22.4196777 C6.05230238,23.8424316 7.2079121,25 8.62826984,25 C10.0486763,25 11.2041885,23.8424805 11.2041885,22.4197754 C11.2041885,20.9970215 10.0486276,19.839502 8.62826984,19.839502 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

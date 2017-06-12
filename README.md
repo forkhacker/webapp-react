@@ -1,3 +1,3 @@
 ## Forkhacker
 
-Starter kit:  [react-slingshot](!https://github.com/coryhouse/react-slingshot)
+Starter kit:  [react-slingshot](https://github.com/coryhouse/react-slingshot)

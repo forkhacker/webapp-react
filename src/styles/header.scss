@@ -1,0 +1,132 @@
+button:hover{
+  cursor: pointer;
+}
+
+body{
+  background-color: #F6F6F6;
+}
+.nav-wrap{
+  padding-top: 15px;
+  max-width: 100% !important;
+  background-color: #2DCC70;
+  box-shadow: 0px 5px 30px #c4c4c4;
+  /*    box-shadow: 0 4px 20px 0px rgba(0,0,0,0.1);*/
+}
+
+
+.nav-col{
+  /*    display: inline-block;*/
+}
+
+.search-group{
+  margin-left: 180px;
+  margin-top: -40px;
+
+  max-width: 500px;
+  /*    display: inline-block;*/
+}
+
+.search-input{
+  height: 40px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border: none ;
+  box-shadow: none;
+  /*    display: inline-block;*/
+
+}
+
+.search-input::-webkit-input-placeholder {
+  font: normal 15px 'Roboto';
+  color: #8B8B8B;
+}
+
+.search-input:-ms-input-placeholder {
+  font: normal 15px 'Roboto';
+  color: #8B8B8B;
+}
+
+.search-input:-moz-placeholder {
+  font: normal 15px 'Roboto';
+  color: #8B8B8B;
+}
+
+.search-input::-moz-placeholder {
+  font: normal 15px 'Roboto';
+  color: #8B8B8B;
+}
+
+input:focus {
+  outline: none !important;
+  border: none !important;
+  background-color: white !important;
+  box-shadow: none !important;
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+
+.search-label{
+  border-top-left-radius: 25px !important;
+  border-bottom-left-radius: 25px !important;
+  background-color: white;
+  border: none;
+  color: #8B8B8B;
+  /*
+  width: 10%;
+  height: 40px;
+  display: inline-block;
+*/
+}
+
+.user-action{
+  float: right;
+  margin-right: 185px;
+  margin-top: -50px;
+  /*    max-width: 200px;*/
+}
+
+.user-action button{
+  padding-left: 10px;
+}
+
+.user-nav{
+  position: absolute;
+  right: 0px;
+  float: right;
+  margin-right: 25px;
+  margin-top: -50px;
+  color: white;
+  /*    display: inline-block;*/
+  border-left: 2px solid #239854;
+}
+
+.user-nav button{
+  color: white;
+  padding-left: 10px;
+  display: inline;
+}
+
+.user-image{
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  /*    border: 1px solid black;*/
+  display: inline-block;
+  padding-left: 10px;
+  margin-left: 15px;
+}
+
+.user-name{
+  position: relative;
+  top: -10px;
+  /*    margin-top: -60px;*/
+  display: inline-block;
+  padding-left: 10px;
+  font: normal 15px 'Roboto';
+}
+
+.user-options{
+  position: relative;
+  top: -10px;
+  display: inline-block;
+}

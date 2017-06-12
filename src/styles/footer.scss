@@ -1,0 +1,57 @@
+footer{
+    background-color: #2DCC70;
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+
+.footer-left{
+    border-right: 2px solid #99E6BA;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-desc{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: white;
+    font: normal 17px 'Roboto';
+    width:400px;
+}
+
+.social-icons a{
+    text-align: center;
+    color: white;
+    border: 1px solid white;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    padding-top: 2px;
+    margin-right: 20px;
+}
+
+.social-icons a:hover{
+    color: #2DCC70;
+    background-color: white;
+}
+
+.footer-right{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-left: 80px;
+}
+
+.footer-right h4{
+    font: bold 17px 'Roboto'; 
+    color: white;
+    margin-bottom: 15px;
+}
+
+.trending-list{
+    font: normal 17px 'Roboto'; 
+    color: white;
+}
+
+.trending-list div{
+    margin-bottom: 5px;
+}
