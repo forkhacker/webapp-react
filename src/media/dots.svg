@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="5px" viewBox="0 0 17 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>dots</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="challenge-page-list" transform="translate(-458.000000, -486.000000)" fill="#4A4A4A">
+            <g id="challenge-card-1" transform="translate(95.000000, 280.000000)">
+                <g id="dots" transform="translate(363.000000, 206.000000)">
+                    <circle id="Oval-2" cx="2.5" cy="2.5" r="2.5"></circle>
+                    <circle id="Oval-2" cx="14.5" cy="2.5" r="2.5"></circle>
+                    <circle id="Oval-2" cx="8.5" cy="2.5" r="2.5"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

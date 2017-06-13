@@ -1,4 +1,7 @@
 import React from 'react';
+import SearchBox from './SearchBox';
+import Alerts from './Alerts';
+import User from './User';
 
 class Header extends React.Component {
 
@@ -15,34 +18,26 @@ class Header extends React.Component {
 
     render() {
         return (
-            <div className="nav-wrap row">
-                <div className="small-12 small-centered columns nav-col">
-                    <a href="#"><img src={require('../../media/logo.svg')}/></a>
-                    <div className="input-group search-group">
-                        <div className="input-group-label search-label"><i className="fa fa-search"
-                                                                           aria-hidden="true"></i></div>
-                        <input type="text" className="input-group-field search-input"
-                               placeholder="Search by Name, Language, Organisation and More"/>
+            <header>
+                <div className="row align-middle">
+                    <div className="column shrink">
+                        <a href="#"><img src={require('../../media/logo.svg')}/></a>
                     </div>
-                    <div className="user-action">
-                        <button className="notifs">
-                            <img src={require('../../media/notification.svg')}/>
-                        </button>
-                        <button className="msgs">
-                            <img src={require('../../media/chat.svg')}/>
-                        </button>
+                    <div className="column">
+                        <SearchBox />
                     </div>
-                    <div className="user-nav">
-                        <div className="user-image">
-                            <img src={this.state.user.img}/>
+                    <div className="columns">
+                        <div className="row align-right">
+                            <div className="columns">
+                                <Alerts />
+                            </div>
+                            <div className="columns">
+                                <User />
+                            </div>
                         </div>
-                        <div className="user-name">{this.state.user.name}</div>
-                        <button className="user-options">
-                            <i className="fa fa-caret-down" aria-hidden="true"></i>
-                        </button>
                     </div>
                 </div>
-            </div>
+            </header>
         );
     }
 }

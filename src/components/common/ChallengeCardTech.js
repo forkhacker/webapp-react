@@ -7,7 +7,7 @@ class ChallengeCardTech extends React.Component {
 
     render() {
         return(
-            <div className="tech-label" id={this.props.level}>
+            <div className="tags" id={this.props.level}>
                 {this.props.technology}
             </div>
         );

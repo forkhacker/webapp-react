@@ -14,8 +14,8 @@
             </feMerge>
         </filter>
     </defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="challenge-page" transform="translate(-1114.000000, -31.000000)" fill-rule="nonzero" fill="#FFFFFF">
+    <g id="main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="challenge-page-list" transform="translate(-1114.000000, -31.000000)" fill-rule="nonzero" fill="#FFFFFF">
             <g id="nav-green-big">
                 <g id="notification" filter="url(#filter-1)" transform="translate(1118.000000, 33.000000)">
                     <path d="M17.0725664,17.7438965 L14.8577696,14.6049316 L14.8577696,8.47246094 C14.8577696,5.34248047 12.5449903,2.74370117 9.54136043,2.29985352 L9.54136043,0.914648437 C9.54136043,0.409521484 9.13251462,0 8.62826984,0 C8.1239763,0 7.71513049,0.409521484 7.71513049,0.914648437 L7.71513049,2.29980469 C4.71150067,2.74365234 2.39867257,5.34243164 2.39867257,8.47241211 L2.39867257,14.6049316 L0.183924554,17.7438965 C-0.242421629,18.3480469 0.189335533,19.186377 0.929567272,19.186377 L16.3269724,19.186377 C17.0655955,19.1864258 17.4998875,18.3493164 17.0725664,17.7438965 Z" id="Shape"></path>

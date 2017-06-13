@@ -1,0 +1,32 @@
+body{
+    font-family: $font-family-primary;
+    font-weight: $font-weight-regular;
+    font-size: 14px;
+}
+
+//headers
+h1{
+    font-size:32px;
+}
+h2{
+    font-size:24px;
+    font-weight: $font-weight-medium;
+}
+h3{
+    font-size: 18px;
+}
+
+//other
+
+button:hover{
+    cursor: pointer;
+}
+
+[type='text']:focus, [type='password']:focus, [type='date']:focus, [type='datetime']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='week']:focus, [type='email']:focus, [type='number']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='url']:focus, [type='color']:focus, textarea:focus {
+    outline: none;
+    border: none;
+    background-color: white;
+    box-shadow: none;
+    -webkit-transition: none;
+    transition: none;
+}

@@ -1,65 +1,61 @@
-button:hover{
-    cursor: pointer;
-}
-
 .challenge-list{
     margin-top: 50px;
 }
 
 .challenge-card{
     background-color: white;
-/*    position: absolute;*/
-    max-width: 350px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: $card-shadow;
     transition: 0.3s;
     margin-bottom: 40px;
 }
 
 .challenge-card:hover{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.15);
 }
 
 .challenge-head{
-/*    background-color: #28AE61;*/
     color: white;
-    font: normal 15px 'Roboto';
+    font-weight: $font-weight-medium;
+    font-size: 16px;
     padding: 15px 20px;
 }
 
-.issue{
+.challenge{
     background-color: white;
     padding: 20px;
+
+    .title{
+        font-weight: $font-weight-bold;
+    }
+
+    .description{
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
 }
 
-.issue-head{
-    color: #4A4A4A;
-    font: bold 18px 'Roboto';
-    padding-bottom: 10px;
-}
 
-.issue-desc{
-    color: #4A4A4A;
-    font: normal 15px 'Roboto';
-    padding-bottom: 10px;
-}
 
-.tech{
+.tags-wrapper{
     padding: 0 20px 20px 20px;
-    max-width: 200px;
-    background-color: white;
-/*    border: 1px solid black;*/
+
+    .tags{
+        border-radius: 5px;
+        font-size: 12px;
+        color: white;
+        padding: 5px 10px;
+        display: inline-block;
+        margin-bottom: 5px;
+        margin-right: 5px;
+    }
+
+    .tags:hover{
+        //todo: something to get user know they can click this too
+    }
 }
 
-.tech-label{
-/*    background-color: #28AE61;*/
-    border-radius: 5px;
-    font: normal 14px 'Roboto';
-    color: white;
-    padding: 5px 10px;
-    display: inline-block;
-    margin-bottom: 5px;
-    margin-right: 5px;
-}
+
 
 .challenge-options{
     display: inline-block;
@@ -71,15 +67,12 @@ button:hover{
 }
 
 .bug {
-/*    vertical-align: 10px;*/
     float: right;
-    
+    img{
+        width: 23px;
+    }
 }
 
-.bug img{
-    height: auto;
-    width: 23px;
-}
 
 #easy{
     background-color: #28AE61;

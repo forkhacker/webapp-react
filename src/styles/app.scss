@@ -1,11 +1,23 @@
-//this is the main file will only include imports
+//this is the main file will only contain imports
 
-//todo : Create Global and setting filess
-
+//framework
 @import "foundation";
+
+//fonts
+@import "fonts";
+
+//app settings
 @import "settings";
-@import "header";
-@import "challenge-card";
+
+//Global
+@import "global";
+
+//components
+@import "component/header";
+@import "component/challenge-card";
+@import "component/filterbar";
+@import "component/footer";
+
+//Pages
 @import "challenge-page";
-@import "filterbar";
-@import "footer";
+

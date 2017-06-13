@@ -1,11 +1,16 @@
+.challenge-list{
+    li{
+        list-style-type: none;
+    }
+}
+
 .challenge-main{
-/*    position: relative;*/
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
     margin-top: 50px;
     padding: 30px 30px;
     margin-bottom: 15px;
-    
+
 }
 
 .challenge-line{

@@ -1,5 +1,6 @@
 footer{
-    background-color: #2DCC70;
+    font-family: $font-family-footer;
+    background-color: $primary-color-dark;
     margin-top: 50px;
     margin-bottom: 0px;
 }
@@ -42,13 +43,13 @@ footer{
 }
 
 .footer-right h4{
-    font: bold 17px 'Roboto'; 
+    font: bold 17px 'Roboto';
     color: white;
     margin-bottom: 15px;
 }
 
 .trending-list{
-    font: normal 17px 'Roboto'; 
+    font: normal 17px 'Roboto';
     color: white;
 }
 

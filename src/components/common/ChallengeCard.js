@@ -27,21 +27,24 @@ class ChallengeCard extends React.Component {
         const technologyList = getTechnologyList();
 
         return(
-            <div className="small-10 small-offset-1 medium-6 medium-offset-0 large-4 large-offset-0 columns">
+            <li className="small-10 small-offset-1 medium-6 medium-offset-0 large-4 large-offset-0 columns">
                 <div className="challenge-card">
                     <div className="challenge-head" id={this.props.level}>
                         {this.props.head}
-                        <div className="bug"><img src="src/media/bug.svg"/></div>
+                        <div className="bug">
+                            <img src={require('../../media/bug.svg')}/>
+                        </div>
                     </div>
-                    <div className="issue">
-                        <div className="issue-head">
+                    <div className="challenge">
+                        <h3 className="title">
                             {this.props.issue}
-                        </div>
-                        <div className="issue-desc">
+                        </h3>
+                        <p className="description">
                             {this.props.description}
-                        </div>
+                        </p>
                     </div>
-                    <div className="tech">
+                    <div className="tags-wrapper">
+                        {technologyList}
                         {technologyList}
                     </div>
                     <div className="challenge-options">
@@ -54,7 +57,7 @@ class ChallengeCard extends React.Component {
                         <a href="#" className="challenge-options-card-el">Option 4</a>
                     </div>
                 </div>
-            </div>
+            </li>
         );
     }
 }

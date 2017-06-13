@@ -88,19 +88,26 @@ class ChallengeCardList extends React.Component {
         const getChallengeCard = () => {
             return this.state.challenge.map((challenge) => {
                 return(
-                    <ChallengeCard key={challenge.id} head={challenge.head} issue={challenge.issue} description={challenge.description} technologies={challenge.technologies} level={challenge.level}/>
+                    <ChallengeCard
+                        key={challenge.id}
+                        head={challenge.head}
+                        issue={challenge.issue}
+                        description={challenge.description}
+                        technologies={challenge.technologies}
+                        level={challenge.level}
+                    />
                 );
             });
-        }
+        };
 
         const challengeCard = getChallengeCard();
 
         return(
-            <div className="row challenge-list">
-                <div className="small-10 small-centered large-12 columns">
-                    <div className="row">
+            <div className="row align-center challenge-list ">
+                <div className="small-10 large-12 columns">
+                    <ul className="row">
                         {challengeCard}
-                    </div>
+                    </ul>
                 </div>
             </div>
         );
