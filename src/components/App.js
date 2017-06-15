@@ -1,24 +1,20 @@
 import  React, {PropTypes} from 'react';
-import Header from './common/Header';
-import Footer from './common/Footer';
-import ChallengePageFilter from './ChallengePageFilter';
-import ChallengeCardList from './ChallengeCardList';
-import {connect} from 'react-redux';
+import Header from './common/header/Header';
+import Footer from './common/footer/Footer';
+// import {connect} from 'react-redux';
 
 class App extends React.Component {
-  render() {
-    return (
-      <div>
-        <Header
-          loading={false}
-        />
-          <ChallengePageFilter />
-          <ChallengeCardList />
-        {/*{this.props.children}*/}
-        <Footer/>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div>
+                <Header
+                    loading={false}
+                />
+                {this.props.children}
+                <Footer/>
+            </div>
+        );
+    }
 }
 
 // function mapStateToProps(state, ownProps) {

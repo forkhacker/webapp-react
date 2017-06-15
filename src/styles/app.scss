@@ -12,7 +12,10 @@
 //Global
 @import "global";
 
+
+
 //components
+@import "component/loader";
 @import "component/header";
 @import "component/challenge-card";
 @import "component/filterbar";

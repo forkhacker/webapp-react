@@ -1,46 +1,59 @@
-.challenge-list{
+.challenge-list {
     margin-top: 50px;
+    a{
+        color: black;
+    }
 }
 
-.challenge-card{
+.challenge-card {
     background-color: white;
     box-shadow: $card-shadow;
     transition: 0.3s;
     margin-bottom: 40px;
 }
 
-.challenge-card:hover{
+.challenge-card:hover {
     cursor: pointer;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.15);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.15);
 }
 
-.challenge-head{
+.challenge-head {
     color: white;
     font-weight: $font-weight-medium;
     font-size: 16px;
     padding: 15px 20px;
+    position: relative;
+
+    h4{
+        margin-bottom: 0px;
+    }
+    .category-icon {
+        position: absolute;
+        right: 20px;
+        top:13px;
+        img {
+            width: 23px;
+        }
+    }
 }
 
-.challenge{
+.challenge {
     background-color: white;
     padding: 20px;
 
-    .title{
+    .title {
         font-weight: $font-weight-bold;
     }
 
-    .description{
+    .description {
         margin-top: 10px;
-        margin-bottom: 0px;
+        margin-bottom: 20px;
     }
 }
 
+.tags-wrapper {
 
-
-.tags-wrapper{
-    padding: 0 20px 20px 20px;
-
-    .tags{
+    .tags {
         border-radius: 5px;
         font-size: 12px;
         color: white;
@@ -50,14 +63,12 @@
         margin-right: 5px;
     }
 
-    .tags:hover{
+    .tags:hover {
         //todo: something to get user know they can click this too
     }
 }
 
-
-
-.challenge-options{
+.challenge-options {
     display: inline-block;
     padding-right: 20px;
     padding-bottom: 10px;
@@ -66,43 +77,36 @@
     margin-top: -35px;
 }
 
-.bug {
-    float: right;
-    img{
-        width: 23px;
-    }
+
+#easy {
+    background-color: $challenge-easy-primary-color;
 }
 
-
-#easy{
-    background-color: #28AE61;
+#intermediate {
+    background-color: $challenge-medium-primary-color;
 }
 
-#intermediate{
-    background-color: #297FB8;
+#hard {
+    background-color: $challenge-hard-primary-color;
 }
 
-#hard{
-    background-color: #E84C3D;
-}
-
-.challenge-options-card{
+.challenge-options-card {
     position: relative;
     z-index: 9999;
     background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     float: right;
     margin-top: -150px;
     margin-right: 20px;
     display: none;
 }
 
-.challenge-options-card a:hover{
+.challenge-options-card a:hover {
     background-color: rgba(128, 128, 128, 0.1);
     color: black;
 }
 
-.challenge-options-card-el{
+.challenge-options-card-el {
     display: block;
     padding: 5px 10px;
     font: normal 15px 'Roboto';
