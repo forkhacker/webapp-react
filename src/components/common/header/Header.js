@@ -53,7 +53,6 @@ function mapDispatchToProps(dispatch) {
 }
 
 function mapStateToProps(state) {
-    console.log(55,state);
     return {
         user : state.login
     };

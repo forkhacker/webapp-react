@@ -10,12 +10,9 @@ export function userLoginSuccess(user) {
 }
 
 export function loginUser(code) {
-    return dispatch => {
-        login(code)
-            .then(user => {
-                console.log(user);
-                dispatch(userLoginSuccess(user));
-            })
-            .catch(console.log);
+    return async dispatch => {
+        const user = await login(code)
+        user.isLoggedIn = true;
+        return dispatch(userLoginSuccess(user));
     };
 }
