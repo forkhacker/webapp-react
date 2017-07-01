@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import * as url from './urlConstants';
+// import * as url from './urlConstants';
 
 import * as loginActions from '../actions/loginActions';
 
@@ -10,19 +10,10 @@ import Loader from './common/Loader';
 class LoginRedirect extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            githubCode: props.location.query.code,
-        };
-        this.loginUser = this.loginUser.bind(this);
-    }
-
-    loginUser(code) {
-        debugger;
-        this.props.actions.loginUser(url.baseUrl + url.userLoginUrl + 'code=' + code);
     }
 
     componentDidMount() {
-        this.loginUser(this.state.githubCode);
+        this.props.actions.loginUser(this.props.location.query.code);
     }
 
     render() {

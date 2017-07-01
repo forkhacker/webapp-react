@@ -1,5 +1,6 @@
 import * as types from './actionTypes';
 import 'whatwg-fetch';
+import login from '../api/auth';
 
 export function userLoginSuccess(user) {
     return {
@@ -8,21 +9,13 @@ export function userLoginSuccess(user) {
     };
 }
 
-export function loginUser(url) {
+export function loginUser(code) {
     return dispatch => {
-        fetch(url)
-            .then(response => {
-                if(!response.ok){
-                    throw Error(response.statusText);
-                }
-
-                return response;
+        login(code)
+            .then(login => {
+                console.log(login);
+                dispatch(userLoginSuccess(login));
             })
-            .then(response => response.json())
-            .then(response => {
-                console.log(response);
-                dispatch(userLoginSuccess(response));
-            })
-            .catch(()=> {throw Error("API failed")});
+            .catch(console.log);
     };
-};
+}
