@@ -5,7 +5,7 @@ import intialState from './intialState';
 export default function courseReducer(state = intialState.user, action) {
     switch (action.type) {
         case types.USER_LOGIN_SUCCESS:
-            return action.user;
+            return Object.assign({}, state, action.user);
         default:
             return state;
     }

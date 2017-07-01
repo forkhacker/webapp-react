@@ -12,9 +12,9 @@ export function userLoginSuccess(user) {
 export function loginUser(code) {
     return dispatch => {
         login(code)
-            .then(login => {
-                console.log(login);
-                dispatch(userLoginSuccess(login));
+            .then(user => {
+                console.log(user);
+                dispatch(userLoginSuccess(user));
             })
             .catch(console.log);
     };

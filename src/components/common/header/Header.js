@@ -1,32 +1,28 @@
 import React from 'react';
-import {Link} from 'react-router';
 
 import Logo from './Logo';
 import SearchBox from './SearchBox';
 import UserActions from './UserActions';
 
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+
+import * as loginActions from '../../../actions/loginActions';
 
 class Header extends React.Component {
 
     constructor(props) {
         super(props);
 
-        this.state = {
-            user: {
-                isLoggedIn : false,
-                name: "",
-                img: ""
-            }
-        };
-
         this.loginWithGithub= this.loginWithGithub.bind(this);
     }
 
     loginWithGithub() {
+        const loginUser = this.props.actions.loginUser;
         window.addEventListener('message', (event) => {
                 if (typeof event.data === 'string') {
                     window.console.log('called');
-                    // auth.login(this, event.data);
+                    loginUser(event.data);
                 }
             }
         );
@@ -40,8 +36,8 @@ class Header extends React.Component {
 
                     <Logo columnClass="shrink"/>
                     <SearchBox columnClass=""/>
-                    {this.state.user.isLoggedIn && <UserActions columnClass="shrink"/>}
-                    {!this.state.user.isLoggedIn &&
+                    {this.props.user.isLoggedIn && <UserActions columnClass="shrink"/>}
+                    {!this.props.user.isLoggedIn &&
                     <a onClick={this.loginWithGithub} >Loing with Github</a>}
 
                 </div>
@@ -50,4 +46,17 @@ class Header extends React.Component {
     }
 }
 
-export default Header;
+function mapDispatchToProps(dispatch) {
+    return {
+        actions: bindActionCreators(loginActions, dispatch)
+    };
+}
+
+function mapStateToProps(state) {
+    console.log(55,state);
+    return {
+        user : state.login
+    };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

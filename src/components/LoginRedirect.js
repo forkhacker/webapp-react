@@ -1,9 +1,4 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
-// import * as url from './urlConstants';
-
-import * as loginActions from '../actions/loginActions';
 
 import Loader from './common/Loader';
 
@@ -13,7 +8,9 @@ class LoginRedirect extends React.Component {
     }
 
     componentDidMount() {
-        this.props.actions.loginUser(this.props.location.query.code);
+        const code = this.props.location.query.code;
+        window.opener.postMessage(code, window.location);
+        window.close();
     }
 
     render() {
@@ -25,16 +22,4 @@ class LoginRedirect extends React.Component {
     }
 }
 
-function mapDispatchToProps(dispatch) {
-    return {
-        actions: bindActionCreators(loginActions, dispatch)
-    };
-}
-
-function mapStateToProps(state) {
-    return {
-        user : state.user
-    };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(LoginRedirect);
+export default LoginRedirect;
