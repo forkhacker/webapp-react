@@ -1,18 +1,21 @@
 import * as types from './actionTypes';
 import 'whatwg-fetch';
 import login from '../api/auth';
+import * as loaderActions from './loaderActions';
 
 export function userLoginSuccess(user) {
     return {
         type : types.USER_LOGIN_SUCCESS,
-        user
+        user,
     };
 }
 
 export function loginUser(code) {
     return async dispatch => {
-        const user = await login(code)
+        dispatch(loaderActions.show());
+        const user = await login(code);
         user.isLoggedIn = true;
-        return dispatch(userLoginSuccess(user));
+        dispatch(userLoginSuccess(user));
+        return dispatch(loaderActions.hide());
     };
 }

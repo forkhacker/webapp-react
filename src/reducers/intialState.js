@@ -1,5 +1,5 @@
 export default {
-    fullScreenLoader: true,
+    loader: false,
     user: {
         isLoggedIn: false,
         name: "",

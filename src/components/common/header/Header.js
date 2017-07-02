@@ -3,6 +3,7 @@ import React from 'react';
 import Logo from './Logo';
 import SearchBox from './SearchBox';
 import UserActions from './UserActions';
+import Loader from '../Loader';
 
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
@@ -18,11 +19,11 @@ class Header extends React.Component {
     }
 
     loginWithGithub() {
-        const loginUser = this.props.actions.loginUser;
+        const actions = this.props.actions;
         window.addEventListener('message', (event) => {
                 if (typeof event.data === 'string') {
                     window.console.log('called');
-                    loginUser(event.data);
+                    actions.loginUser(event.data);
                 }
             }
         );
@@ -33,13 +34,12 @@ class Header extends React.Component {
         return (
             <header>
                 <div className="row align-middle">
-
-                    <Logo columnClass="shrink"/>
-                    <SearchBox columnClass=""/>
-                    {this.props.user.isLoggedIn && <UserActions columnClass="shrink"/>}
-                    {!this.props.user.isLoggedIn &&
-                    <a onClick={this.loginWithGithub} >Loing with Github</a>}
-
+                {this.props.loader && <Loader size="full-screen"/>}
+                <Logo columnClass="shrink"/>
+                <SearchBox columnClass=""/>
+                {this.props.user.isLoggedIn && <UserActions columnClass="shrink"/>}
+                {!this.props.user.isLoggedIn &&
+                <a onClick={this.loginWithGithub} >Loing with Github</a>}
                 </div>
             </header>
         );
@@ -54,7 +54,8 @@ function mapDispatchToProps(dispatch) {
 
 function mapStateToProps(state) {
     return {
-        user : state.login
+        user : state.login,
+        loader : state.loader
     };
 }
 
