@@ -14,13 +14,13 @@ class Header extends React.Component {
 
     constructor(props) {
         super(props);
-
         this.loginWithGithub= this.loginWithGithub.bind(this);
     }
 
     loginWithGithub() {
         const actions = this.props.actions;
         window.addEventListener('message', (event) => {
+                // TODO: add non expected data handleing
                 if (typeof event.data === 'string') {
                     window.console.log('called');
                     actions.loginUser(event.data);
@@ -37,7 +37,7 @@ class Header extends React.Component {
                 {this.props.loader && <Loader size="full-screen"/>}
                 <Logo columnClass="shrink"/>
                 <SearchBox columnClass=""/>
-                {this.props.user.isLoggedIn && <UserActions columnClass="shrink"/>}
+                {this.props.user.isLoggedIn && <UserActions user = {this.props.user} columnClass="shrink"/>}
                 {!this.props.user.isLoggedIn &&
                 <a onClick={this.loginWithGithub} >Loing with Github</a>}
                 </div>

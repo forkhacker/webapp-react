@@ -3,8 +3,8 @@ export default {
     user: {
         isLoggedIn: false,
         name: "",
-        githubHandle: "",
-        avatar: ""
+        username: "",
+        pictureUrl: ""
     },
     challenges: [],
     notifications: [],

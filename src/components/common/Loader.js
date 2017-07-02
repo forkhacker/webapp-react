@@ -7,7 +7,7 @@ const Loader = ({size}) => {
             <div className="row align-middle align-center">
                 <div className="columns">
                     <div className="loader"></div>
-                    <p>This is temporary</p>
+                    <p>Loading</p>
                 </div>
             </div>
         </div>

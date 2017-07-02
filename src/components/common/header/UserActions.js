@@ -4,7 +4,7 @@ import {Link} from 'react-router';
 import Alerts from './Alerts';
 import User from './User';
 
-const UserActions = ({columnClass}) => {
+const UserActions = ({columnClass, user}) => {
     return (
         <div className={"columns " + columnClass}>
             <div className="row align-right">
@@ -12,7 +12,7 @@ const UserActions = ({columnClass}) => {
                     <Alerts />
                 </div>
                 <div className="columns">
-                    <User />
+                    <User user={user}/>
                 </div>
             </div>
         </div>
