@@ -4,6 +4,9 @@ header {
     background-color: $primary-color;
     box-shadow: $card-shadow;
 
+    a{
+        color:white;
+    }
 
     .search-box {
         position: relative;
