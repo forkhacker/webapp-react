@@ -7,8 +7,7 @@ export default function loginReducer(state = intialState.user, action) {
         case types.USER_LOGIN_SUCCESS:
             return Object.assign({}, state, action.user);
         case 'persist/REHYDRATE':
-            debugger;
-            return {...state, persistedState : action.payload}
+            return {...action.payload.login};
         default:
             return state;
     }

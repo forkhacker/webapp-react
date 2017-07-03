@@ -17,6 +17,6 @@ export default function configureStore(intialState) {
         composeEnhancers(applyMiddleware(thunk, reduxImmutableStateInvariant()), autoRehydrate())
     );
 
-    persistStore(store,{whitelist : ['login']});
+    persistStore(store,{whitelist : ['login'], storage : localForage});
     return store;
 }
