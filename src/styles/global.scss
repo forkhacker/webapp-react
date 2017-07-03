@@ -54,3 +54,19 @@ button:hover {
     -webkit-transition: none;
     transition: none;
 }
+
+.menu-card{
+    box-shadow: $card-shadow;
+    padding: 10px 20px 10px 20px;
+    position: absolute;
+    right: 0px;
+    background: white;
+    color: $black;
+    top:20px;
+    p{
+        margin-bottom: 0px;
+    }
+    p:hover{
+        cursor: pointer;
+    }
+}
