@@ -5,7 +5,7 @@ import loader from './loaderReducer';
 
 const rootReducer = combineReducers({
     login,
-    loader,
+    loader
 });
 
 export default rootReducer;
