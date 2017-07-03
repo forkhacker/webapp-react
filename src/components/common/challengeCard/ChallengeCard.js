@@ -3,7 +3,8 @@ import ChallengeCardLang from './ChallengeCardLang';
 import {Link} from 'react-router';
 
 const getChallengeLang = (challenge) => {
-    return challenge.languages.map((language,i) => {
+    const tags = [...challenge.languages, ...challenge.frameworks, ...challenge.tags]
+    return tags.map((language,i) => {
         return (
             <ChallengeCardLang key={i} language={language} difficulty={challenge.difficulty}/>
         );
@@ -11,13 +12,13 @@ const getChallengeLang = (challenge) => {
 };
 
 const ChallengeCard = ({challenge}) => {
-    const technologyList = getChallengeLang(challenge);
+    const languangeList = getChallengeLang(challenge);
     return (
         <li className="small-10 small-offset-1 medium-6 medium-offset-0 large-4 large-offset-0 columns">
             <Link to={'/challenge/' + challenge._id}>
                 <div className="challenge-card">
                     <div className="challenge-head" id={challenge.difficulty}>
-                        <h4>{challenge.type}</h4>
+                        <h4>{challenge.github.repository_url.split('/')[challenge.github.repository_url.split('/').length - 1]}</h4>
                         <div className="category-icon">
                             <img src={require('../../../media/bug.svg')}/>
                         </div>
@@ -30,10 +31,7 @@ const ChallengeCard = ({challenge}) => {
                             {challenge.body}
                         </p>
                         <div className="tags-wrapper">
-                            {technologyList}
-                        </div>
-                        <div className="tags-wrapper">
-                            {technologyList}
+                            {languangeList}
                         </div>
                         <div className="challenge-options">
                             <button><i className="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i></button>
