@@ -2,26 +2,16 @@ import React from 'react';
 import ChallengeCard from './common/challengeCard/ChallengeCard';
 
 
+const getChallengeCards = (challenges) => {
+    return challenges.map((challenge) => {
+        return (
+            <ChallengeCard key={challenge._id} challenge={challenge}/>
+        );
+    });
+};
+
 const ChallengeCardList = ({challenges}) => {
-
-    const getChallengeCard = () => {
-        return challenges.map((challenge) => {
-            return (
-                <ChallengeCard
-                    key={challenge.id}
-                    head={challenge.head}
-                    issue={challenge.issue}
-                    description={challenge.description}
-                    technologies={challenge.technologies}
-                    level={challenge.level}
-                    id={challenge.id}
-                />
-            );
-        });
-    };
-
-    const challengeCard = getChallengeCard();
-
+    const challengeCard = getChallengeCards(challenges);
     return (
         <div className="row align-center challenge-list ">
             <div className="small-10 large-12 columns">
@@ -31,6 +21,6 @@ const ChallengeCardList = ({challenges}) => {
             </div>
         </div>
     );
-}
+};
 
 export default ChallengeCardList;
