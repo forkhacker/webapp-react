@@ -14,32 +14,63 @@ class Header extends React.Component {
 
     constructor(props) {
         super(props);
-        this.loginWithGithub= this.loginWithGithub.bind(this);
+
+        this.state = {
+            userActionsDisplay: false
+        }
+
+        this.loginWithGithub = this.loginWithGithub.bind(this);
+        this.logoutUser = this.logoutUser.bind(this);
+
+        this.hideUserActions = this.hideUserActions.bind(this);
+        this.showUserActions = this.showUserActions.bind(this);
     }
 
     loginWithGithub() {
-        const actions = this.props.actions;
         window.addEventListener('message', (event) => {
                 // TODO: add non expected data handleing
                 if (typeof event.data === 'string') {
                     window.console.log('called');
-                    actions.loginUser(event.data);
+                    this.props.actions.loginUser(event.data);
                 }
             }
         );
         window.open(`https://github.com/login/oauth/authorize?client_id=30c841ac632b4a6839ae&redirect_uri=http://localhost:3000/auth/github/callback&scope=user%20repo`);
     }
 
+    logoutUser() {
+        this.props.actions.logoutUser();
+    }
+
+    hideUserActions() {
+        this.setState({
+            userActionsDisplay: false
+        });
+    }
+
+    showUserActions() {
+        this.setState({
+            userActionsDisplay: true
+        });
+    }
+
     render() {
+        console.log('Header Rendered');
         return (
             <header>
                 <div className="row align-middle">
-                {this.props.loader && <Loader size="full-screen"/>}
-                <Logo columnClass="shrink"/>
-                <SearchBox columnClass=""/>
-                {this.props.user.isLoggedIn && <UserActions user = {this.props.user} columnClass="shrink"/>}
-                {!this.props.user.isLoggedIn &&
-                <a onClick={this.loginWithGithub} >Loing with Github</a>}
+                    {this.props.loader && <Loader size="full-screen"/>}
+                    <Logo columnClass="shrink"/>
+                    <SearchBox columnClass=""/>
+                    {this.props.user.isLoggedIn &&
+                    <UserActions user={this.props.user}
+                                 showUserActions={this.showUserActions}
+                                 hideUserActions={this.hideUserActions}
+                                 userActionsDisplay = {this.state.userActionsDisplay}
+                                 initLogout = {this.logoutUser}
+                                 columnClass="shrink"/>}
+                    {!this.props.user.isLoggedIn &&
+                    <a onClick={this.loginWithGithub}>Login with Github</a>}
                 </div>
             </header>
         );
@@ -53,10 +84,9 @@ function mapDispatchToProps(dispatch) {
 }
 
 function mapStateToProps(state) {
-    // debugger
     return {
-        user : state.login,
-        loader : state.loader
+        user: state.login,
+        loader: state.loader
     };
 }
 

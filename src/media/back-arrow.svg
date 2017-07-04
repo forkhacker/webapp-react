@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="16px" viewBox="0 0 23 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>right-arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="challenge-page" transform="translate(-94.000000, -128.000000)" stroke="#4A4A4A" fill-rule="nonzero" fill="#4A4A4A">
+            <g id="Group-2" transform="translate(95.000000, 126.000000)">
+                <g id="right-arrow" transform="translate(10.500000, 10.500000) scale(-1, 1) translate(-10.500000, -10.500000) translate(0.000000, 3.000000)">
+                    <path d="M13.9157813,0.217173913 C13.63425,-0.0723913043 13.1656875,-0.0723913043 12.8743125,0.217173913 C12.5927813,0.496956522 12.5927813,0.962608696 12.8743125,1.24173913 L18.1551563,6.48978261 L0.72909375,6.48978261 C0.322875,6.49043478 0,6.81130435 0,7.215 C0,7.61869565 0.322875,7.95 0.72909375,7.95 L18.1551563,7.95 L12.8743125,13.1882609 C12.5927813,13.4778261 12.5927813,13.9441304 12.8743125,14.2232609 C13.1656875,14.5128261 13.6349063,14.5128261 13.9157813,14.2232609 L20.4467813,7.73282609 C20.7381563,7.45304348 20.7381563,6.9873913 20.4467813,6.70826087 L13.9157813,0.217173913 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

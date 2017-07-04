@@ -11,6 +11,15 @@ export function userLoginSuccess(user) {
     };
 }
 
+export function logoutUser() {
+    return{
+        type: types.USER_LOGOUT,
+        user : {
+            isLoggedIn : false
+        }
+    };
+}
+
 export function loginUser(code) {
     return async dispatch => {
         dispatch(loaderActions.show());
@@ -20,3 +29,5 @@ export function loginUser(code) {
         return dispatch(loaderActions.hide());
     };
 }
+
+

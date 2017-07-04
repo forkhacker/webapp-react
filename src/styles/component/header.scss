@@ -4,6 +4,9 @@ header {
     background-color: $primary-color;
     box-shadow: $card-shadow;
 
+    a{
+        color:white;
+    }
 
     .search-box {
         position: relative;
@@ -57,6 +60,7 @@ header {
     }
 
     .user-options {
+        position: relative;
         margin-left: 10px;
     }
 
