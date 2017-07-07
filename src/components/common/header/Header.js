@@ -17,7 +17,7 @@ class Header extends React.Component {
 
         this.state = {
             userActionsDisplay: false
-        }
+        };
 
         this.loginWithGithub = this.loginWithGithub.bind(this);
         this.logoutUser = this.logoutUser.bind(this);

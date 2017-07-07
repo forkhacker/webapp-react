@@ -19,7 +19,7 @@ const User = ({user, showUserActions, hideUserActions, userActionsDisplay, initL
     );
 };
 
-User.prototypes = {
+User.proptypes = {
     user: Proptypes.object.isRequired,
     initLogout : Proptypes.func.isRequired,
     showUserActions: Proptypes.func.isRequired,
