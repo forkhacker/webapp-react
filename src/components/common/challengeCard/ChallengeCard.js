@@ -1,5 +1,5 @@
 import React from 'react';
-import ChallengeCardLang from './ChallengeCardLang';
+import ChallengeCardLang from './ChallengeCardTech';
 import {Link} from 'react-router';
 
 const getChallengeLang = (challenge) => {
@@ -17,7 +17,7 @@ const ChallengeCard = ({challenge}) => {
         <li className="small-10 small-offset-1 medium-6 medium-offset-0 large-4 large-offset-0 columns">
             <Link to={'/challenge/' + challenge._id}>
                 <div className="challenge-card">
-                    <div className="challenge-head" id={challenge.difficulty}>
+                    <div className={"challenge-head " + challenge.difficulty}>
                         <h4>{challenge.github.repository_url.split('/')[challenge.github.repository_url.split('/').length - 1]}</h4>
                         <div className="category-icon">
                             <img src={require('../../../media/bug.svg')}/>

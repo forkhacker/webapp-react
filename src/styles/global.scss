@@ -43,8 +43,44 @@ h4 {
     }
 }
 
+.easy {
+    background-color: $challenge-easy-primary-color;
+    color: $white;
+}
+
+.intermediate {
+    background-color: $challenge-medium-primary-color;
+    color: $white;
+}
+
+.hard {
+    background-color: $challenge-hard-primary-color;
+    color: $white;
+}
+
+.easy-hollow {
+    color: $challenge-easy-primary-color;
+}
+
+.intermediate-hollow {
+    color: $challenge-medium-primary-color;
+}
+
+.hard-hollow {
+    color: $challenge-hard-primary-color;
+}
+
 button:hover {
     cursor: pointer;
+}
+
+.button-primary{
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+.button-hollow{
+    border: 1px solid;
 }
 
 [type='text']:focus, [type='password']:focus, [type='date']:focus, [type='datetime']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='week']:focus, [type='email']:focus, [type='number']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='url']:focus, [type='color']:focus, textarea:focus {

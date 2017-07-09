@@ -1,17 +1,72 @@
-.challenge-page{
-    .back-to-challenge{
+.challenge-page {
+    .separator {
+        height: 2px;
+        width: 100%;
+        background: $extra-light-gray;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .back-to-challenge {
         margin-top: 20px;
         margin-bottom: 15px;
         padding-right: 0.9375rem;
         padding-left: 0.9375rem;
-        .columns{
+        .columns {
             padding: 0px;
         }
-        h4{
+        h4 {
             display: inline-block;
             color: $dark-gray;
             font-weight: $font-weight-bold;
             margin-bottom: 0px;
         }
     }
+    .header {
+        .tags {
+            background: white;
+            border: 1px solid;
+            border-radius: 5px;
+            font-size: 12px;
+            padding: 5px 10px;
+            display: inline-block;
+            margin-bottom: 5px;
+            margin-right: 5px;
+        }
+        .time-head {
+            margin-bottom: 0px;
+            margin-top: 10px;
+            color: $dark-gray;
+        }
+        .time {
+            font-weight: 400;
+        }
+    }
+
+    .about-repo {
+        img {
+            height: 50px;
+        }
+        h2 {
+            font-family: $font-family-secondary;
+            font-weight: $font-weight-regular;
+            margin-bottom: 0px;
+        }
+        p {
+            font-size: 14px;
+            font-family: $font-family-secondary;
+            font-weight: $font-weight-medium;
+            margin-top: -8px;
+            margin-bottom: 0px;
+        }
+        .button-set{
+            margin-top: 20px;
+        }
+        .button-hollow{
+            color: $black;
+            height: 30px;
+            padding: 0px 15px;
+            margin-right: 10px;
+        }
+    }
+
 }
