@@ -1,12 +1,23 @@
 import React from 'react';
+import marked from 'marked';
+
 import ChallengeCardTech from './common/challengeCard/ChallengeCardTech';
 
 class ChallengePage extends React.Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            code: '# React Markdown Editor\n\n* A list\n\nSome **bold** and _italic_ text\n\n> A quote...\n\nBy [Jed Watson](https://github.com/JedWatson) and [Joss Mackison](https://github.com/jossmac)'
+        };
     }
 
+
     render() {
+        //for markdown
+        var preview = marked(this.state.code);
+
+
         const tags = ['Electron', 'JS'];
         const getChallengeTags = () => {
             return tags.map((language, i) => {
@@ -53,6 +64,9 @@ class ChallengePage extends React.Component {
                             </div>
                             <div className="row">
                                 <div className="columns">
+                                    <hr/>
+                                    <div className="preview" dangerouslySetInnerHTML={{__html: preview}} />
+                                    <hr/>
                                     <p>
                                         Electron version: 1.6.2<br/>
                                         Operating system:Win 10<br/>
