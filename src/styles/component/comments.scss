@@ -1,0 +1,30 @@
+.comments-section {
+    .comments-head{
+        h3{
+            margin-bottom: 20px;
+        }
+    }
+    .author{
+        .user{
+            padding-left: 0px;
+        }
+        .name{
+            margin-bottom: -5px;
+            font-size: 14px;
+            font-weight: $font-weight-medium;
+            font-family: $font-family-primary;
+        }
+        .date{
+            font-size: 12px;
+            font-weight: $font-weight-medium;
+            font-family: $font-family-primary;
+            color:$dark-gray;
+        }
+    }
+    .comment {
+        margin-bottom: 0.6rem;
+        font-size: 14px;
+        font-weight: 100;
+        line-height: 1.2;
+    }
+}

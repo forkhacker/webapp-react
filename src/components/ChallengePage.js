@@ -2,6 +2,7 @@ import React from 'react';
 import marked from 'marked';
 
 import ChallengeCardTech from './common/challengeCard/ChallengeCardTech';
+import Comments from './Comments';
 
 class ChallengePage extends React.Component {
     constructor(props) {
@@ -30,7 +31,7 @@ class ChallengePage extends React.Component {
         const challengeTags = getChallengeTags();
 
         return (
-            <div className="challenge-page">
+            <section className="challenge-page">
                 <a className="row align-middle back-to-challenge">
                     <img className="columns shrink" src={require('../media/back-arrow.svg')}/>
                     <h4 className="columns shrink">Back to Challenges</h4>
@@ -145,7 +146,10 @@ class ChallengePage extends React.Component {
                         </div>
                     </div>
                 </div>
-            </div>
+
+                <Comments />
+
+            </section>
         );
     }
 }
