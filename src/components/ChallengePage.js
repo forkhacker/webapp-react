@@ -61,13 +61,12 @@ class ChallengePage extends React.Component {
                             <div className="row">
                                 <div className="columns">
                                     <h2>About the challenge</h2>
+                                    <span className="separator"/>
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="columns">
-                                    <hr/>
-                                    <div className="preview" dangerouslySetInnerHTML={{__html: preview}} />
-                                    <hr/>
+                                    <div className="preview" dangerouslySetInnerHTML={{__html: preview}}/>
                                     <p>
                                         Electron version: 1.6.2<br/>
                                         Operating system:Win 10<br/>
@@ -101,7 +100,7 @@ class ChallengePage extends React.Component {
                                         <img src={require('../media/electron.svg')}/>
                                     </div>
                                     <div className="columns">
-                                        <h2>Electron.js</h2>
+                                        <h2 className="head">Electron.js</h2>
                                         <p>electron/electron</p>
                                     </div>
                                 </div>
@@ -129,7 +128,7 @@ class ChallengePage extends React.Component {
                                         <img src={require('../media/man.svg')}/>
                                     </div>
                                     <div className="columns">
-                                        <h2>James Blunt</h2>
+                                        <h2 className="head">James Blunt</h2>
                                         <p>@jamesblunt</p>
                                     </div>
                                 </div>
@@ -147,7 +146,17 @@ class ChallengePage extends React.Component {
                     </div>
                 </div>
 
-                <Comments />
+                <div className="comments-section">
+
+                    <div className="row comments-head">
+                        <div className="columns">
+                            <h1>Comments</h1>
+                            <h3>+ Add a comment</h3>
+                        </div>
+                    </div>
+
+                    <Comments />
+                </div>
 
             </section>
         );
