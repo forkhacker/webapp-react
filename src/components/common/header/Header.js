@@ -7,8 +7,8 @@ import Loader from '../Loader';
 
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-
 import * as loginActions from '../../../actions/loginActions';
+import {REDIRECT_URL, GITHUB_CLIENT_ID} from '../../../api/constants.js';
 
 class Header extends React.Component {
 
@@ -35,7 +35,7 @@ class Header extends React.Component {
                 }
             }
         );
-        window.open(`https://github.com/login/oauth/authorize?client_id=30c841ac632b4a6839ae&redirect_uri=http://localhost:3000/auth/github/callback&scope=user%20repo`);
+        window.open(`https://github.com/login/oauth/authorize?client_id=${GITHUB_CLIENT_ID}&redirect_uri=${REDIRECT_URL}`);
     }
 
     logoutUser() {
