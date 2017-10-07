@@ -2,12 +2,12 @@
 import {combineReducers} from 'redux';
 import login from './loginReducer';
 import loader from './loaderReducer';
-import challenges from './challengeReducer';
+import challenge from './challengeReducer';
 
 const rootReducer = combineReducers({
     login,
     loader,
-    challenges,
+    challenge,
 });
 
 export default rootReducer;

@@ -6,7 +6,9 @@ export default {
         username: "",
         pictureUrl: ""
     },
-    challenges: [],
+    challenge: {
+        list: [],
+    },
     notifications: [],
     messages: [], // phase 2
 };
