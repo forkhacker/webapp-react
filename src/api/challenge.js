@@ -8,3 +8,10 @@ export async function list() {
     });
     return response.data.data.challenges;
 }
+
+export async function get(id) {
+    const response = await axios.get(`/challenge/${id}`, {
+        baseURL: BASE_URL,
+    });
+    return response.data.data.challenge;
+}
