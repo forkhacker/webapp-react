@@ -11,12 +11,12 @@ const getChallengeCards = (challenges) => {
 };
 
 const ChallengeCardList = ({challenges}) => {
-    const challengeCard = getChallengeCards(challenges);
+    const challengeCards = getChallengeCards(challenges);
     return (
         <div className="row align-center challenge-list ">
             <div className="small-10 large-12 columns">
                 <ul className="row">
-                    {challengeCard}
+                    {challengeCards}
                 </ul>
             </div>
         </div>

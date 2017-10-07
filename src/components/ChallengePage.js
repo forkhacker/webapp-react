@@ -1,5 +1,9 @@
 import React from 'react';
 import marked from 'marked';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import * as challengeActions from '../actions/challengeActions'
+
 
 import ChallengeCardTech from './common/challengeCard/ChallengeCardTech';
 import Comments from './Comments';
@@ -13,6 +17,10 @@ class ChallengePage extends React.Component {
         };
     }
 
+    componentDidMount() {
+        console.log(this.props.actions,this.props.actions.getChallenge);
+        this.props.actions.getChallenge(this.props.params.id);
+    }
 
     render() {
         //for markdown
@@ -75,8 +83,7 @@ class ChallengePage extends React.Component {
                                         After calling app.relaunch a way to cancel it.<br/><br/>
 
                                         Actual behavior<br/>
-                                        After calling app.relaunch there is no way to cancel it. Or i didn't find
-                                        anything in the documentation.<br/><br/>
+                                        After calling app.relaunch there is no way to cancel it. Or i did<br/><br/>
 
                                         Creator can use Markup to Create Content here as much as he want.<br/>
                                     </p>
@@ -155,12 +162,24 @@ class ChallengePage extends React.Component {
                         </div>
                     </div>
 
-                    <Comments />
+                    <Comments/>
                 </div>
 
             </section>
         );
     }
 }
+function mapDispatchToProps(dispatch) {
+    return {
+        actions: bindActionCreators(challengeActions, dispatch)
+    };
+}
 
-export default ChallengePage;
+function mapStateToProps(state) {
+    return {
+        challenges : state.challenges,
+    };
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(ChallengePage);

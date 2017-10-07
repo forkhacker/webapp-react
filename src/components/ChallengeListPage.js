@@ -32,7 +32,7 @@ function mapDispatchToProps(dispatch) {
 
 function mapStateToProps(state) {
     return {
-        challenges : state.challenges,
+        challenges : state.challenge.list,
     };
 }
 
