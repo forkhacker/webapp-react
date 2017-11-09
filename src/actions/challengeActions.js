@@ -2,6 +2,8 @@ import * as types from './actionTypes';
 import 'whatwg-fetch';
 import * as challenge from '../api/challenge';
 import * as loaderActions from './loaderActions';
+import marked from 'marked';
+
 
 export function challengesListSuccess(challenges) {
     return {
@@ -29,6 +31,7 @@ export function listChallenges() {
 export function getChallenge(id) {
     return async dispatch => {
         const challengeData = await challenge.get(id);
+        challengeData.markdownPreview = marked(challengeData.body);
         console.log(challengeData);
         dispatch(challengesGetSuccess(challengeData));
     };

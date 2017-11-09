@@ -8,6 +8,9 @@ export default {
     },
     challenge: {
         list: [],
+        current: {
+            body: 'none body'
+        },
     },
     notifications: [],
     messages: [], // phase 2

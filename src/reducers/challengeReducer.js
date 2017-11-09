@@ -7,7 +7,7 @@ export default function challengeReducer(state = intialState.challenge, action) 
         case types.CHALLENGES_LIST_SUCCESS:
             return {...state, list: action.challenges};
         case types.CHALLENGES_GET_SUCCESS:
-            return {...state, current: action.challenges};
+            return {...state, current: action.challenge};
         default:
             return state;
     }

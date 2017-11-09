@@ -1,43 +1,42 @@
 import React from 'react';
-import marked from 'marked';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as challengeActions from '../actions/challengeActions'
 
-
-import ChallengeCardTech from './common/challengeCard/ChallengeCardTech';
+import ChallengeCardTech from './common/challengeCard/ChallengeCard';
+import ChallengeComp from './common/challenge/Challenge';
 import Comments from './Comments';
+
+// const getChallengeLang = (challenge) => {
+//     const tags = [...challenge.languages, ...challenge.frameworks, ...challenge.tags]
+//     return tags.map((language,i) => {
+//         return (
+//             <ChallengeCardTech key={i} language={language} difficulty={challenge.difficulty}/>
+//         );
+//     });
+// };
+const getChallengeTags = (tags) => {
+    if(!tags) return;
+    return tags.map((language, i) => {
+        return (
+            <ChallengeCardTech key={i} language={language} difficulty={'easy-hollow'}/>
+        );
+    });
+};
 
 class ChallengePage extends React.Component {
     constructor(props) {
         super(props);
-
-        this.state = {
-            code: '# React Markdown Editor\n\n* A list\n\nSome **bold** and _italic_ text\n\n> A quote...\n\nBy [Jed Watson](https://github.com/JedWatson) and [Joss Mackison](https://github.com/jossmac)'
-        };
     }
 
     componentDidMount() {
-        console.log(this.props.actions,this.props.actions.getChallenge);
         this.props.actions.getChallenge(this.props.params.id);
     }
 
     render() {
-        //for markdown
-        var preview = marked(this.state.code);
 
-
-        const tags = ['Electron', 'JS'];
-        const getChallengeTags = () => {
-            return tags.map((language, i) => {
-                return (
-                    <ChallengeCardTech key={i} language={language} difficulty={'easy-hollow'}/>
-                );
-            });
-        };
-
-        const challengeTags = getChallengeTags();
-
+        const challengeTags = getChallengeTags(this.props.challenge.tags);
+        // const languangeList = getChallengeLang(challenge);
         return (
             <section className="challenge-page">
                 <a className="row align-middle back-to-challenge">
@@ -65,31 +64,7 @@ class ChallengePage extends React.Component {
 
                 <div className="row">
                     <div className="columns large-8 about-challenge">
-                        <div className="default-card">
-                            <div className="row">
-                                <div className="columns">
-                                    <h2>About the challenge</h2>
-                                    <span className="separator"/>
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="columns">
-                                    <div className="preview" dangerouslySetInnerHTML={{__html: preview}}/>
-                                    <p>
-                                        Electron version: 1.6.2<br/>
-                                        Operating system:Win 10<br/>
-                                        Expected behavior<br/><br/>
-
-                                        After calling app.relaunch a way to cancel it.<br/><br/>
-
-                                        Actual behavior<br/>
-                                        After calling app.relaunch there is no way to cancel it. Or i did<br/><br/>
-
-                                        Creator can use Markup to Create Content here as much as he want.<br/>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                        <ChallengeComp challenge={this.props.challenge}/>
                     </div>
 
                     <div className="columns large-4 about-repo">
@@ -177,7 +152,7 @@ function mapDispatchToProps(dispatch) {
 
 function mapStateToProps(state) {
     return {
-        challenges : state.challenges,
+        challenge : state.challenge.current,
     };
 }
 
